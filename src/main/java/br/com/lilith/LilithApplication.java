@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LilithApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(LilithApplication.class, args);
 	}
 
