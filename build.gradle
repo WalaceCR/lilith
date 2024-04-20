@@ -1,11 +1,52 @@
+buildscript {
+	ext {
+		springBootVersion = "3.2.4"
+	}
+
+	repositories {
+		mavenCentral()
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+	}
+
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.22.1")
+	}
+}
+
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.4'
 	id 'io.spring.dependency-management' version '1.1.4'
+	id 'com.palantir.docker' version '0.22.1'
 }
 
-group = 'br.com.lilith'
+group = 'wals2lu'
 version = '0.0.1-SNAPSHOT'
+
+bootJar{
+	baseName = 'lilith_games'
+	version = '1.0.0'
+}
+
+tasks.register('unpack', Copy) {
+	dependsOn bootJar
+	from(zipTree(tasks.bootJar.outputs.files.singleFile))
+	into("build/dependency")
+}
+
+
+//Já está preparado para gerar imagem no formato linux/amd64, inclusive em computadores com processadores ARM, como os novos Macbook.
+//A variável project.name deve ser configurada no arquivo settings.gradle
+docker {
+	name "${project.group}/${project.name}"
+	buildx true
+	platform 'linux/amd64'
+	copySpec.from(tasks.unpack.outputs).into('dependency')
+	buildArgs(['DEPENDENCY' : "dependency"])
+}
 
 java {
 	sourceCompatibility = '17'

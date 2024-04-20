@@ -24,8 +24,8 @@ public class HomeController {
             log.info("Teste controler: ", "Bem vinda Luana Steck");
             return ResponseEntity.ok("Nome de player: Luana Steck");
         }else {
-            log.info("Teste controler: ", "Bem vindo Walace Steck");
-            return ResponseEntity.ok("Nome de player: Walace Steck");
+            log.info("Teste controler: ", "Bem vindo Walace Steck S2 Luana Steck");
+            return ResponseEntity.ok("Nome de player: Walace Steck S2 Luana Steck");
         }
     }
 
