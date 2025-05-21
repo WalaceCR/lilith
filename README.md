@@ -1,18 +1,17 @@
 # Lilith
-Repo de código em Java para:<br />
-1 - Rever conceitos desde interfaces;<br />
-2 - Criação de api com Springboot;<br />
-3 - Realização de CRUD.<br />
+Este projeto é uma api REST para gerenciar metas financeiras.
+
 <br />
-## Ideias <br />
+<div id="#"></div>
 <br />
-1 - Cadastro de filmes assistidos/para assistir;<br />
-2 - Cadastro de games jogados/para jogar;<br />
-2 - Cadastro de decks/partidas de Magic jogadas.<br />
+<br />
+1 - Plug em api de filmes;<br />
+2 - Plug em api de games;<br />
+2 - Plug em api terceira de magic.<br />
 
 ## Pré-requisitos [EM ATUALIZAÇÃO] <br />
-Java 22;<br />
-Maven 3.9.6;<br />
+Java 21;<br />
+Maven 3.9.9;<br />
 Banco de dados no Mysql.<br />
 
 ## Como executar [EM ATUALIZAÇÃO] <br />
