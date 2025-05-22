@@ -1,9 +1,5 @@
 # Lilith
 Este projeto é uma api REST para gerenciar metas financeiras.
-
-<br />
-<div id="#"></div>
-<br />
 <br />
 1 - Plug em api de filmes;<br />
 2 - Plug em api de games;<br />
