@@ -1,0 +1,117 @@
+type: spec.insomnia.rest/5.0
+name: Api de metas
+meta:
+  id: wrk_a8501d522ffd486f812de724660622f7
+  created: 1747948724763
+  modified: 1747948724763
+collection:
+  - url: http://localhost:8080/api/metas
+    name: Get Metas
+    meta:
+      id: req_db7d597002584a408d2a75b32fd21872
+      created: 1747948778110
+      modified: 1747948963556
+      isPrivate: false
+      sortKey: -1747948778110
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/metas/incluir
+    name: New Request
+    meta:
+      id: req_4e92b8327998405b9c4f938ec8567f7b
+      created: 1747949018740
+      modified: 1747949276127
+      isPrivate: false
+      sortKey: -1747949018740
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "Meta de Exemplo",
+          "descricao": "Descrição da meta",
+          "tipo": "IMOVEL",
+          "valor": 100.0,
+          "data": "2025-05-22T00:00:00.000+00:00"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/metas/h2-console
+    name: Get Metas h2
+    meta:
+      id: req_1738302fd16c4337a5e4bf0a524e18c8
+      created: 1747949342109
+      modified: 1747949349192
+      isPrivate: false
+      sortKey: -1747948778060
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/metas/api/api-docs
+    name: Get Metas Swagger
+    meta:
+      id: req_ca0f5b1e0508434a81133f37722a9d79
+      created: 1747949588434
+      modified: 1747949846226
+      isPrivate: false
+      sortKey: -1747948778010
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_7fc4af59d624af6f5f0cae0ede291ddd27895f69
+    created: 1747948724782
+    modified: 1747948724782
+environments:
+  name: Base Environment
+  meta:
+    id: env_7fc4af59d624af6f5f0cae0ede291ddd27895f69
+    created: 1747948724775
+    modified: 1747948724775
+    isPrivate: false
+spec:
+  meta:
+    id: spc_0590ec254901479c9b2db3e7f69afea6
+    created: 1747948724769
+    modified: 1747948724769
